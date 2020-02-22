@@ -11,7 +11,15 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener('click', writePassword);
+generateBtn.addEventListener('click', function() {
+    var length = prompt("Choose how many characters you want between 8 and 128.")
+    var upper = confirm("Do you want uppercase letters?");
+    var lower = confirm("Do you want lowercase letters?");
+    var numbers = confirm("Do you want numbers?");
+    var symbols = confirm("Do you want symbols?");
+
+
+});
 
 function randomUpper() {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
@@ -29,4 +37,3 @@ function randomSym() {
     var sym = '~`!@#$%^&*()<>?";:{[]}?';
     return sym[(Math.floor(Math.random() * sym.length))];
 }
-
