@@ -1,10 +1,5 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var userLengthValue;
-var upperCase;
-var lowerCase;
-var number;
-var symbol;
 
 // Write password to the #password input
 function writePassword() {
@@ -14,8 +9,6 @@ function writePassword() {
   passwordText.value = password;
 
 }
-
-
 
 function generatePassword() {
     
