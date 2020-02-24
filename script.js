@@ -25,10 +25,10 @@ function generatePassword() {
       alert("Wrong answer. Try again.");
       return generatePassword();
     }
-
+    // An array that takes information from the if statements to create a password
     var newPassword = [];
     
-    // var upper = confirm("Do you want uppercase letters?");
+   
     if (upper===true) {
         upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
         for (i = 0; i < upperCase.length; i++) {
@@ -36,35 +36,32 @@ function generatePassword() {
         }
     } 
 
-    // var lower = confirm("Do you want lowercase letters?");
     if (lower===true) {
         lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
         for (i = 0; i < lowerCase.length; i++) {
             newPassword.push(lowerCase[i]);
-    } 
-}
-
-    // var numbers = confirm("Do you want numbers?");
+        } 
+    }
+    
     if (numbers===true) {
         number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
         for (i = 0; i < number.length; i++) {
             newPassword.push(number[i]);
+        }
     }
-} 
-
-    // var symbols = confirm("Do you want symbols?");
+    
     if (symbols===true) {
         symbol = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", "{", "[", "}", "]", ":", ";", "'", "<", ">", "?", "/", "`", "~"];
         for (i = 0; i < symbol.length; i++) {
             newPassword.push(symbol[i]);
+        }
     }
-}
 
     if (upper!==true && lower!==true && numbers!==true && symbols!==true) {
         alert("You did not choose a character type! Try again.");
         return generatePassword();
     }
-
+    // This variable uses the for loop to take in the user's desired character length and combine it with the randomly selected characters
     var pass = ""
 
         for (var i = 0; i < userLengthValue; i++) {
