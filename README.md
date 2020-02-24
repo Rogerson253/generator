@@ -3,7 +3,7 @@
 # Live Link
 https://rogerson253.github.io/generator/
 
-# Contributers
+# Contributors
 rogerson253@Gmail.com
 
 # Technologies
