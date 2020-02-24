@@ -9,20 +9,21 @@ function writePassword() {
   passwordText.value = password;
 
 }
-
+// This randomly generates a password based on user input
 function generatePassword() {
     
     var userLength = prompt("Choose how many characters you want between 8 and 128.");
-    var upper = confirm("Do you want uppercase letters?");
-    var lower = confirm("Do you want lowercase letters?");
-    var numbers = confirm("Do you want numbers?");
-    var symbols = confirm("Do you want symbols?");
-    
     
     if (userLength >= 8 && userLength <= 128) {
         userLengthValue = parseInt(userLength);
+
+        var upper = confirm("Do you want uppercase letters?");
+        var lower = confirm("Do you want lowercase letters?");
+        var numbers = confirm("Do you want numbers?");
+        var symbols = confirm("Do you want symbols?");
     } else {
-      alert("Not enough characters.");
+      alert("Wrong answer. Try again.");
+      return generatePassword();
     }
 
     var newPassword = [];
@@ -58,6 +59,11 @@ function generatePassword() {
             newPassword.push(symbol[i]);
     }
 }
+
+    if (upper!==true && lower!==true && numbers!==true && symbols!==true) {
+        alert("You did not choose a character type! Try again.");
+        return generatePassword();
+    }
 
     var pass = ""
 
